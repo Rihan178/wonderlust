@@ -85,6 +85,9 @@ app.use((req,res,next)=>{
 app.use("/listing",listingRouter);
 app.use("/listing/:id/reviews",reviewRouter);
 app.use("/",userRouter);
+app.get("/",(req,res)=>{
+    res.send("/listing");
+});
 
 
 //this route work when any routes does'nt match the given routes
